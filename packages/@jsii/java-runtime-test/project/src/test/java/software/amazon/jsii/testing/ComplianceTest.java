@@ -15,8 +15,8 @@ import software.amazon.jsii.tests.calculator.lib.EnumFromScopedModule;
 import software.amazon.jsii.tests.calculator.lib.IFriendly;
 import software.amazon.jsii.tests.calculator.lib.MyFirstStruct;
 import software.amazon.jsii.tests.calculator.lib.Number;
+import software.amazon.jsii.tests.calculator.lib.NumericValue;
 import software.amazon.jsii.tests.calculator.lib.StructWithOnlyOptionals;
-import software.amazon.jsii.tests.calculator.lib.Value;
 import software.amazon.jsii.tests.calculator.submodule.child.OuterClass;
 
 import java.io.IOException;
@@ -205,7 +205,7 @@ public class ComplianceTest {
     public void unmarshallIntoAbstractType() {
         Calculator calc = new Calculator();
         calc.add(120);
-        Value value = calc.getCurr();
+        NumericValue value = calc.getCurr();
         assertEquals(120, value.getValue());
     }
 
@@ -1195,7 +1195,7 @@ public class ComplianceTest {
 
     @Test
     public void testJsiiAgent() {
-        assertEquals("Java/" + System.getProperty("java.version"), JsiiAgent.getJsiiAgent());
+        assertEquals("Java/" + System.getProperty("java.version"), JsiiAgent.getValue());
     }
 
     /**
