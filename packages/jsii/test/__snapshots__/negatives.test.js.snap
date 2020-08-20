@@ -349,7 +349,7 @@ exports[`member-named-after-class 1`] = `
   neg.member-named-after-class.ts:1:14
     1 export class TypeName {
                    ~~~~~~~~
-    Class TypeName is declared here
+    The declaring class is introduced here
 neg.member-named-after-class.ts:6:10 - error TS9999: JSII: Methods cannot be named like the class declaring them (class is OtherType, method is otherType), as this results in illegal C#
 
 6   public otherType() {
@@ -358,7 +358,7 @@ neg.member-named-after-class.ts:6:10 - error TS9999: JSII: Methods cannot be nam
   neg.member-named-after-class.ts:5:14
     5 export class OtherType {
                    ~~~~~~~~~
-    Class OtherType is declared here
+    The declaring class is introduced here
 "
 `;
 
